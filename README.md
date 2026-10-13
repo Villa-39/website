@@ -35,11 +35,12 @@ Auf der Startseite werden lange Texte nach einer festen Zeichenzahl am Wortende 
 In `fortschritt.json` stehen:
 
 - `aktuell` – der aktuelle Stand in Euro
+- `unterstuetzende` – Anzahl der Unterstützer*innen (optional; fehlt das Feld, wird die Zeile nicht angezeigt)
 - `ziel` – das Zwischenziel in Euro
 - `stand` – Datum der letzten Aktualisierung (`JJJJ-MM-TT`)
 - `meilensteine` – Liste von Abschnitten mit `titel` und `betrag` (Größe des Abschnitts in Euro; die Abschnitte werden der Reihe nach gefüllt)
 
-Zum Aktualisieren genügt es, `aktuell` und `stand` zu ändern. Fehlt die Datei oder ist sie ungültig, bleibt der Balken einfach unsichtbar.
+Zum Aktualisieren genügt es, `aktuell`, `unterstuetzende` und `stand` zu ändern. Fehlt die Datei oder ist sie ungültig, bleibt der Balken einfach unsichtbar.
 
 ### Texte und Bilder
 Texte stehen direkt in den HTML-Dateien. Bilder liegen in `images/`. Neue Bilder bitte vor dem Hochladen verkleinern (Breite ca. 1600 px, möglichst unter 500 KB) und immer mit sinnvollem `alt`-Text einbinden.

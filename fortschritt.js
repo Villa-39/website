@@ -1,6 +1,7 @@
 /*
  * Fortschrittsbalken: liest die Zahlen aus fortschritt.json.
- * Zum Aktualisieren nur "aktuell" und "stand" in fortschritt.json ändern.
+ * Zum Aktualisieren nur "aktuell", "unterstuetzende" und "stand" in fortschritt.json ändern.
+ * "unterstuetzende" ist optional: Fehlt das Feld, wird die Zeile nicht angezeigt.
  */
 (function () {
     'use strict';
@@ -153,6 +154,20 @@
             var fill = box.querySelector('.fund-fill');
             var track = box.querySelector('.fund-track');
             var dateEl = box.querySelector('.fund-date');
+            var supportersEl = box.querySelector('.fund-supporters');
+            var countEl = box.querySelector('.fund-count');
+            var countLabelEl = box.querySelector('.fund-count-label');
+
+            // Anzahl der Unterstützer*innen (optional)
+            var raw = data.unterstuetzende;
+            var supporters = (raw === null || raw === undefined || raw === '') ? NaN : Number(raw);
+            var hasSupporters = !!(supportersEl && countEl && supporters >= 0 && isFinite(supporters));
+            if (hasSupporters) {
+                supporters = Math.round(supporters);
+                countEl.textContent = (reduceMotion ? supporters : 0).toLocaleString('de-DE');
+                if (countLabelEl) countLabelEl.textContent = supporters === 1 ? 'Unterstützer*in' : 'Unterstützer*innen';
+                supportersEl.hidden = false;
+            }
 
             goalEl.textContent = euro(goal);
             nowEl.textContent = euro(reduceMotion ? current : 0);
@@ -183,6 +198,7 @@
                     var t = Math.min(1, (ts - start) / duration);
                     var eased = 1 - Math.pow(1 - t, 3);
                     nowEl.textContent = euro(current * eased);
+                    if (hasSupporters) countEl.textContent = Math.round(supporters * eased).toLocaleString('de-DE');
                     if (t < 1) requestAnimationFrame(step);
                 }
                 requestAnimationFrame(step);

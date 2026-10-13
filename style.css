@@ -1264,6 +1264,25 @@ footer a:not(.footer-social):hover {
     transition: width 1.4s cubic-bezier(.22, .61, .36, 1);
 }
 
+.fund-supporters {
+    margin-top: 16px;
+}
+
+.about-grid .fund-count {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--riso-blue);
+    font-variant-numeric: tabular-nums;
+    margin-right: 6px;
+}
+
+.fund-count-label {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
 .fund-note {
     margin-top: 14px;
     font-size: .8rem;
