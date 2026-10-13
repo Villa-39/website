@@ -18,6 +18,7 @@ Die Seite besteht aus reinem HTML, CSS und etwas JavaScript. Es gibt keinen Buil
 | `images/` | Bilder |
 | `fonts/` | Schriften (selbst gehostet, mit Lizenzen) |
 | `sitemap.xml`, `robots.txt` | Für Suchmaschinen |
+| `LICENSE` | MIT-Lizenz für den Code (Geltungsbereich siehe unten) |
 
 ## Inhalte pflegen
 
@@ -69,6 +70,15 @@ Die Seite wird über GitHub Pages ausgeliefert, direkt vom Hauptzweig (`main`). 
 - **Suche:** Google Search Console (Verifizierung per DNS-Eintrag).
 
 ## Lizenz und Kontakt
-Texte und Bilder: © Villa 39, alle Rechte vorbehalten. Die Schriften Archivo Black und IBM Plex Mono stehen unter der SIL Open Font License (siehe `fonts/`).
+**Code** (HTML-Gerüst, `style.css`, JavaScript): MIT-Lizenz, siehe `LICENSE`.
+
+**Von der MIT-Lizenz ausgenommen, alle Rechte vorbehalten (© Villa 39):**
+- Texte (Inhalte der Seiten und `news.json`)
+- Bilder (`images/`)
+- Name und Logo „Villa 39"
+
+**Schriften:** Archivo Black und IBM Plex Mono stehen unter der SIL Open Font License (siehe `fonts/`).
+
+Die Website wurde mit Unterstützung von KI-Werkzeugen entwickelt.
 
 Kontakt: [villa39@gmx.de](mailto:villa39@gmx.de)
