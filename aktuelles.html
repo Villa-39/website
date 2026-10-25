@@ -118,6 +118,36 @@
             return String(item.text).split(/\n\s*\n/).map(s => s.trim()).filter(Boolean);
         }
 
+        // Links im Text: In news.json einfach [sichtbares Wort](https://adresse) schreiben.
+        function textSegments(text) {
+            const segs = [];
+            const re = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+            let last = 0, m;
+            while ((m = re.exec(text))) {
+                if (m.index > last) segs.push({ text: text.slice(last, m.index) });
+                segs.push({ text: m[1], href: m[2] });
+                last = re.lastIndex;
+            }
+            if (last < text.length) segs.push({ text: text.slice(last) });
+            return segs;
+        }
+
+        function appendSegments(el, segs) {
+            for (const seg of segs) {
+                const safe = seg.href && (/^(https?:|mailto:)/i.test(seg.href) || !/^[a-z][a-z0-9+.-]*:/i.test(seg.href));
+                if (safe) {
+                    const a = document.createElement('a');
+                    a.className = 'inline-link';
+                    a.href = seg.href;
+                    if (/^https?:/i.test(seg.href)) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+                    a.textContent = seg.text;
+                    el.append(a);
+                } else {
+                    el.append(seg.text);
+                }
+            }
+        }
+
         fetch('news.json')
             .then(res => {
                 if (!res.ok) throw new Error('news.json nicht gefunden');
@@ -169,7 +199,7 @@
                         newsParagraphs(item).forEach(paragraph => {
                             const textEl = document.createElement('p');
                             textEl.className = 'aktuelles-text';
-                            textEl.textContent = paragraph;
+                            appendSegments(textEl, textSegments(paragraph));
                             entry.append(textEl);
                         });
 
