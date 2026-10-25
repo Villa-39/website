@@ -23,5 +23,12 @@
     "text": "Wir haben unsere Türen für Nachbarn, Ehemalige und alle anderen Interessierten mit Dosenwerfen, Tischtennis, Musik und leckerem Essen geöffnet. Danke an alle, die da waren für die tolle Stimmung und die guten Gespräche! (Foto: Patty Varasano)",
     "image": "images/villatuer.jpg",
     "imageAlt": "Tag der offenen Villatür"
+  },
+     {
+    "date": "2026-10-25",
+    "title": "Die Villa in der Mainpost",
+    "text": "Vor kurzem hat uns die Mainpost besucht und nun in einem langen Artikel über unser Projekt berichtet. Wir sind dafür sehr dankbar und freuen uns, dass wir so endlich für einen noch größeren Teil der Würzburger Stadtöffentlichkeit sichtbar sind. Der Artikel ist [hier](https://www.mainpost.de/wuerzburg/stadtwuerzburg/wuerzburg-wuerzburger-wg-will-villa-vor-abriss-retten-auf-diese-ungewoehnliche-weise-kaempft-sie-fuer-ihr-zuhause-115400469) abrufbar.",
+    "image": "images/mainpost.jpg",
+    "imageAlt": "Artikel bei der Mainpost"
   }
 ]
