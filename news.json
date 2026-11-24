@@ -32,9 +32,19 @@
     "imageAlt": "Artikel bei der Mainpost"
   },
    {
-"date": "2026-11-22",
+"date": "2026-11-23",
 "title": "Die Villa im Radio",
 "text": "Nach der Zeitung hat nun auch der Bayerische Rundfunk über uns berichtet! [Hier](https://www.br.de/nachrichten/bayern/bezahlbarer-wohnraum-wg-setzt-auf-mietshaeuser-syndikat,VaV9MPF) gibt es den Beitrag zu lesen und zu hören. Der TV-Beitrag folgt bald."
 "image": "images/br.jpg",
 "imageAlt": "BR-Interview"
+   },
+  
+   {
+"date": "2026-11-24",
+"eventDate": "2026-12-12",
+"title": "Adventsfeier in der Villa",
+"text": "Mit heißem Glühwein, leckerem Essen, einem lauschigen Lagerfeuer wollen wir am Samstag, 12. Dezember, mit euch unseren bisherigen Fortschritt feiern und weiter über unser Projekt informieren. Alle Ehemaligen, Freund*innen, Unterstützer*innen, und alle, die sich für die Villa interessieren, sind herzlich eingeladen, einen gemütlichen Abend mit uns zu verbringen!"
+"image": "images/advent.jpg",
+"imageAlt": "Lagerfeuer"
+   }
 ]
